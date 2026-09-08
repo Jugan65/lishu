@@ -1,0 +1,547 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+
+    background:
+        #f4f2ec;
+
+    color:
+        #111111;
+
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "PingFang SC",
+        "Microsoft YaHei",
+        Arial,
+        sans-serif;
+
+    line-height:
+        1.6;
+}
+
+a {
+    color:
+        inherit;
+
+    text-decoration:
+        none;
+}
+
+
+/* HEADER */
+
+.site-header {
+    min-height:
+        78px;
+
+    padding:
+        0 6vw;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    border-bottom:
+        1px solid #d3d0c7;
+
+    background:
+        rgba(244, 242, 236, 0.94);
+
+    position:
+        sticky;
+
+    top:
+        0;
+
+    z-index:
+        100;
+}
+
+.logo {
+    font-size:
+        20px;
+
+    font-weight:
+        800;
+
+    letter-spacing:
+        0.16em;
+}
+
+.nav {
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    gap:
+        30px;
+
+    font-size:
+        14px;
+}
+
+.nav a {
+    opacity:
+        0.7;
+
+    transition:
+        opacity 0.2s ease;
+}
+
+.nav a:hover {
+    opacity:
+        1;
+}
+
+
+/* HERO */
+
+.hero {
+    min-height:
+        680px;
+
+    padding:
+        100px 6vw;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    border-bottom:
+        1px solid #d3d0c7;
+}
+
+.hero-inner {
+    max-width:
+        1050px;
+}
+
+.hero-label {
+    margin:
+        0 0 28px;
+
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    letter-spacing:
+        0.18em;
+
+    color:
+        #687077;
+}
+
+.hero h1 {
+    margin:
+        0;
+
+    font-size:
+        clamp(52px, 8vw, 108px);
+
+    line-height:
+        1.02;
+
+    letter-spacing:
+        -0.055em;
+
+    font-weight:
+        700;
+}
+
+.hero-description {
+    margin:
+        36px 0 0;
+
+    max-width:
+        690px;
+
+    font-size:
+        18px;
+
+    color:
+        #606060;
+}
+
+.hero-buttons {
+    margin-top:
+        40px;
+
+    display:
+        flex;
+
+    gap:
+        12px;
+}
+
+.button {
+    min-width:
+        126px;
+
+    height:
+        48px;
+
+    padding:
+        0 20px;
+
+    display:
+        inline-flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        center;
+
+    border:
+        1px solid #111;
+
+    font-size:
+        14px;
+
+    font-weight:
+        600;
+}
+
+.button-primary {
+    background:
+        #111;
+
+    color:
+        #ffffff;
+}
+
+
+/* SECTIONS */
+
+.section {
+    padding:
+        110px 6vw;
+
+    border-bottom:
+        1px solid #d3d0c7;
+}
+
+.section-header {
+    max-width:
+        900px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        70px 1fr;
+
+    gap:
+        30px;
+
+    margin-bottom:
+        55px;
+}
+
+.section-number {
+    font-size:
+        12px;
+
+    font-weight:
+        700;
+
+    color:
+        #777;
+}
+
+.section h2 {
+    margin:
+        0;
+
+    font-size:
+        clamp(36px, 5vw, 70px);
+
+    line-height:
+        1.08;
+
+    letter-spacing:
+        -0.04em;
+}
+
+.section-header p {
+    max-width:
+        650px;
+
+    margin-top:
+        18px;
+
+    color:
+        #666;
+}
+
+
+/* CARDS */
+
+.feature-grid {
+    display:
+        grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    border-top:
+        1px solid #cfcac0;
+
+    border-left:
+        1px solid #cfcac0;
+}
+
+.feature-card {
+    min-height:
+        270px;
+
+    padding:
+        28px;
+
+    border-right:
+        1px solid #cfcac0;
+
+    border-bottom:
+        1px solid #cfcac0;
+
+    background:
+        rgba(255,255,255,0.24);
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.feature-card:hover {
+    background:
+        #ffffff;
+
+    transform:
+        translateY(-3px);
+}
+
+.feature-id {
+    font-size:
+        12px;
+
+    color:
+        #888;
+}
+
+.feature-card h3 {
+    margin:
+        90px 0 10px;
+
+    font-size:
+        22px;
+}
+
+.feature-card p {
+    margin:
+        0;
+
+    color:
+        #666;
+
+    font-size:
+        14px;
+}
+
+
+/* PHILOSOPHY */
+
+.philosophy {
+    display:
+        grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap:
+        80px;
+}
+
+.philosophy-left h2 {
+    margin-top:
+        25px;
+}
+
+.philosophy-right {
+    padding-top:
+        40px;
+
+    font-size:
+        20px;
+
+    color:
+        #555;
+}
+
+.philosophy-right p {
+    max-width:
+        620px;
+
+    margin-bottom:
+        28px;
+}
+
+
+/* CONTACT */
+
+.contact-section p {
+    margin-top:
+        26px;
+
+    color:
+        #666;
+}
+
+.contact-email {
+    margin-top:
+        12px;
+
+    display:
+        inline-block;
+
+    font-size:
+        clamp(24px, 4vw, 52px);
+
+    border-bottom:
+        1px solid #111;
+}
+
+
+/* FOOTER */
+
+.footer {
+    min-height:
+        150px;
+
+    padding:
+        40px 6vw;
+
+    display:
+        flex;
+
+    align-items:
+        center;
+
+    justify-content:
+        space-between;
+
+    font-size:
+        12px;
+
+    letter-spacing:
+        0.08em;
+
+    color:
+        #666;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+    .feature-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .philosophy {
+        grid-template-columns:
+            1fr;
+    }
+
+}
+
+
+@media (max-width: 680px) {
+
+    .site-header {
+        align-items:
+            flex-start;
+
+        padding-top:
+            18px;
+
+        padding-bottom:
+            18px;
+    }
+
+    .nav {
+        max-width:
+            60%;
+
+        justify-content:
+            flex-end;
+
+        flex-wrap:
+            wrap;
+
+        gap:
+            10px 16px;
+
+        font-size:
+            12px;
+    }
+
+    .hero {
+        min-height:
+            560px;
+
+        padding-top:
+            70px;
+
+        padding-bottom:
+            70px;
+    }
+
+    .hero h1 {
+        font-size:
+            52px;
+    }
+
+    .feature-grid {
+        grid-template-columns:
+            1fr;
+    }
+
+    .section-header {
+        grid-template-columns:
+            1fr;
+    }
+
+    .footer {
+        gap:
+            20px;
+
+        flex-direction:
+            column;
+
+        align-items:
+            flex-start;
+    }
+
+}

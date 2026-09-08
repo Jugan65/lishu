@@ -1,0 +1,107 @@
+name: Architecture Card
+description: 提交新的架构、方法或实验结构
+title: "[Architecture] "
+labels:
+  - architecture
+
+body:
+
+  - type: markdown
+    attributes:
+      value: |
+        感谢提交新的 Architecture Card。
+
+        这里关注的是结构与方法，不要求提交完整生产源码。
+
+  - type: input
+    id: architecture_name
+    attributes:
+      label: Architecture Name
+      description: 架构或方法名称
+    validations:
+      required: true
+
+  - type: input
+    id: author
+    attributes:
+      label: Author
+      description: 作者或组织
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: 当前版本
+      placeholder: "0.1"
+    validations:
+      required: true
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: 这个结构解决什么问题？
+    validations:
+      required: true
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: Dependencies
+      description: 使用了哪些公开组件、协议或已有结构？
+
+  - type: textarea
+    id: structure
+    attributes:
+      label: Core Structure
+      description: 描述输入、状态、处理步骤和输出之间的关系。
+    validations:
+      required: true
+
+  - type: textarea
+    id: process
+    attributes:
+      label: Core Process
+      description: 描述主要运行流程。
+    validations:
+      required: true
+
+  - type: textarea
+    id: additions
+    attributes:
+      label: New Structure
+      description: 相对已有基础增加了什么？
+
+  - type: textarea
+    id: experiment
+    attributes:
+      label: Experiment / Observation
+      description: 如何测试？观察到了什么？
+
+  - type: textarea
+    id: limitations
+    attributes:
+      label: Known Limitations
+      description: 目前有哪些已知限制或尚未验证的部分？
+
+  - type: dropdown
+    id: source_status
+    attributes:
+      label: Source Code Status
+      options:
+        - Open Source
+        - Private
+        - Commercial
+        - Not decided
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: registry_permission
+    attributes:
+      label: Registry Permission
+      options:
+        - label: 我允许官方 Architecture Registry 展示和引用本 Architecture Card 中公开提交的内容。
+          required: true

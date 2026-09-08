@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+>
+
+<meta
+    name="description"
+    content="Lishu Open Technology 开发者文档"
+>
+
+<title>Documentation · Lishu Open Technology</title>
+
+<link
+    rel="stylesheet"
+    href="../assets/css/main.css"
+>
+
+<style>
+
+.docs-layout {
+    padding:
+        90px 6vw 120px;
+
+    display:
+        grid;
+
+    grid-template-columns:
+        230px minmax(0, 820px);
+
+    gap:
+        70px;
+}
+
+.docs-sidebar {
+    position:
+        sticky;
+
+    top:
+        110px;
+
+    align-self:
+        start;
+
+    display:
+        flex;
+
+    flex-direction:
+        column;
+
+    gap:
+        13px;
+
+    font-size:
+        14px;
+}
+
+.docs-sidebar strong {
+    margin-bottom:
+        10px;
+}
+
+.docs-sidebar a {
+    color:
+        #666;
+}
+
+.docs-content h1 {
+    margin:
+        0 0 24px;
+
+    font-size:
+        clamp(48px, 7vw, 86px);
+
+    line-height:
+        1;
+
+    letter-spacing:
+        -0.05em;
+}
+
+.docs-content h2 {
+    margin:
+        70px 0 18px;
+
+    font-size:
+        32px;
+}
+
+.docs-content p,
+.docs-content li {
+    color:
+        #555;
+
+    font-size:
+        16px;
+}
+
+.docs-content pre {
+    margin:
+        24px 0;
+
+    padding:
+        24px;
+
+    overflow:
+        auto;
+
+    background:
+        #111;
+
+    color:
+        #f4f2ec;
+
+    font-size:
+        13px;
+
+    line-height:
+        1.7;
+}
+
+.docs-note {
+    margin:
+        28px 0;
+
+    padding:
+        22px;
+
+    border-left:
+        3px solid #111;
+
+    background:
+        rgba(255,255,255,0.45);
+}
+
+@media (max-width: 800px) {
+
+    .docs-layout {
+        grid-template-columns:
+            1fr;
+    }
+
+    .docs-sidebar {
+        position:
+            static;
+
+        padding-bottom:
+            25px;
+
+        border-bottom:
+            1px solid #d3d0c7;
+    }
+
+}
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<header class="site-header">
+
+<a
+    class="logo"
+    href="../"
+>
+LISHU
+</a>
+
+<nav class="nav">
+
+<a href="../">
+首页
+</a>
+
+<a href="../docs/">
+文档
+</a>
+
+<a href="../ecosystem/">
+生态
+</a>
+
+<a href="../registry/">
+架构库
+</a>
+
+<a
+    href="https://github.com/Jugan65/lishu"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+GitHub
+</a>
+
+</nav>
+
+</header>
+
+
+<main class="docs-layout">
+
+
+<aside class="docs-sidebar">
+
+<strong>
+Documentation
+</strong>
+
+<a href="#overview">
+概览
+</a>
+
+<a href="#start">
+快速开始
+</a>
+
+<a href="#structure">
+项目结构
+</a>
+
+<a href="#principles">
+公开工程原则
+</a>
+
+<a href="#community">
+参与生态
+</a>
+
+<a href="#security">
+安全问题
+</a>
+
+</aside>
+
+
+<article class="docs-content">
+
+<p class="hero-label">
+DEVELOPER DOCUMENTATION
+</p>
+
+<h1>
+文档
+</h1>
+
+<p class="hero-description">
+这里记录公开工程层的使用方式、接口、示例和生态规则。
+内部研究映射与未公开技术不属于公开文档范围。
+</p>
+
+
+<h2 id="overview">
+概览
+</h2>
+
+<p>
+Lishu Open Technology 面向开发者和研究者提供公开基础实现。
+你可以阅读代码、运行示例、修改实现，
+也可以在此基础上探索新的系统结构。
+</p>
+
+
+<div class="docs-note">
+
+<strong>
+公开工程原则
+</strong>
+
+<p>
+公共文档重点回答：
+如何使用、如何组合、如何测试、如何扩展。
+不要求开发者理解任何内部理论来源。
+</p>
+
+</div>
+
+
+<h2 id="start">
+快速开始
+</h2>
+
+<pre><code>git clone https://github.com/Jugan65/lishu.git
+
+cd lishu
+
+# 查看项目
+ls
+
+# 阅读 README
+cat README.md
+</code></pre>
+
+
+<p>
+具体算法源码和运行方式将在对应模块发布后补充。
+</p>
+
+
+<h2 id="structure">
+推荐项目结构
+</h2>
+
+<pre><code>lishu/
+├── core/
+├── modules/
+├── examples/
+├── docs/
+├── architecture-cards/
+├── tests/
+├── .github/
+└── README.md
+</code></pre>
+
+
+<h2 id="principles">
+公开工程原则
+</h2>
+
+<ul>
+
+<li>
+接口和行为尽量清楚。
+</li>
+
+<li>
+公开代码不需要解释内部命名来源。
+</li>
+
+<li>
+公共实现与商业私有模块保持仓库隔离。
+</li>
+
+<li>
+公开仓库不得提交 Secret、Token、私有 API Key 或客户数据。
+</li>
+
+<li>
+破坏兼容性的重大修改使用新的版本号。
+</li>
+
+</ul>
+
+
+<h2 id="community">
+参与生态
+</h2>
+
+<p>
+你可以通过 GitHub Discussions 分享实验、想法和新的架构。
+如果希望新的结构进入 Architecture Registry，
+可以提交 Architecture Card。
+</p>
+
+<div class="hero-buttons">
+
+<a
+    class="button button-primary"
+    href="../registry/"
+>
+Architecture Registry
+</a>
+
+<a
+    class="button"
+    href="https://github.com/Jugan65/lishu/discussions"
+    target="_blank"
+    rel="noopener noreferrer"
+>
+Discussions
+</a>
+
+</div>
+
+
+<h2 id="security">
+安全问题
+</h2>
+
+<p>
+请不要通过公开 Issue 提交敏感漏洞、凭证或客户数据。
+</p>
+
+<p>
+
+安全相关问题请联系：
+
+<a
+    href="mailto:security@lishudijun.com"
+>
+security@lishudijun.com
+</a>
+
+</p>
+
+
+</article>
+
+
+</main>
+
+
+<footer class="footer">
+
+<div>
+LISHU OPEN TECHNOLOGY
+</div>
+
+<div>
+Documentation
+</div>
+
+</footer>
+
+
+</body>
+
+</html>
